@@ -3,7 +3,7 @@
 import { Navigation } from "@/components/navigation"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Play, Mail, Instagram, Youtube, CheckCircle, Clock, Users, Zap, Target, TrendingUp } from "lucide-react"
+import { Play, Mail, Instagram, Youtube, CheckCircle, Clock, Users, Zap, Target, TrendingUp, PhoneCall } from "lucide-react"
 
 export default function Home() {
   return (
@@ -30,12 +30,8 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-              <Button
-                size="lg"
-                className="px-8 py-6 text-base font-semibold rounded-lg"
-                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                Start Your Project
+              <Button asChild size="lg" className="px-8 py-6 text-base font-semibold rounded-lg shadow-lg shadow-primary/25">
+                <a href="/book">Book a Call</a>
               </Button>
               <Button
                 variant="outline"
@@ -312,30 +308,19 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Social Card */}
+            {/* Book Call Card */}
             <Card className="p-8 bg-gradient-to-br from-white to-muted border border-primary/10 hover:border-primary/30 transition-all hover:shadow-lg">
               <CardContent className="p-0 space-y-6">
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Users className="h-7 w-7 text-primary" />
+                  <PhoneCall className="h-7 w-7 text-primary" />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-foreground">Follow</h3>
-                  <p className="text-muted-foreground text-sm">Stay updated on latest work</p>
+                  <h3 className="text-xl font-bold text-foreground">Strategy Call</h3>
+                  <p className="text-muted-foreground text-sm">Book a 1-on-1 session</p>
                 </div>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm" className="flex-1" asChild>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <Instagram className="h-4 w-4 mr-1" />
-                      Instagram
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="sm" className="flex-1" asChild>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <Youtube className="h-4 w-4 mr-1" />
-                      YouTube
-                    </a>
-                  </Button>
-                </div>
+                <Button asChild className="w-full">
+                  <a href="/book">Book a Call</a>
+                </Button>
               </CardContent>
             </Card>
 

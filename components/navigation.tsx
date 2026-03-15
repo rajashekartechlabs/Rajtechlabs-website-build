@@ -52,6 +52,9 @@ export function Navigation() {
               >
                 Contact
               </a>
+              <Button size="sm" className="ml-4 hidden lg:flex" asChild>
+                <a href="/book">Book a Call</a>
+              </Button>
             </div>
           </div>
 
@@ -91,6 +94,11 @@ export function Navigation() {
               >
                 Contact
               </a>
+              <div className="px-3 py-2">
+                <Button className="w-full justify-start" asChild>
+                  <a href="/book">Book a Call</a>
+                </Button>
+              </div>
               <hr className="my-2 border-border" />
               <a
                 href="/privacy-policy"
