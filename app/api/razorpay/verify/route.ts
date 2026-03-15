@@ -3,6 +3,8 @@ import crypto from "crypto";
 import { getDb } from "@/lib/firebase-admin";
 import { sendBookingEmail } from "@/lib/email";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: NextRequest) {
   try {
     const { 

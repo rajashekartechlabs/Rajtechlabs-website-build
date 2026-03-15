@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDb } from "@/lib/firebase-admin";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: NextRequest) {
   try {
     const { couponCode } = await req.json();
@@ -32,7 +34,7 @@ export async function POST(req: NextRequest) {
     if (usedCount >= 5) {
       return NextResponse.json({
         valid: false,
-        error: "This coupon has reached its maximum usage limit (2 times)."
+        error: "This coupon has reached its maximum usage limit (5 times)."
       }, { status: 400 });
     }
 
@@ -40,7 +42,7 @@ export async function POST(req: NextRequest) {
       valid: true,
       discountPrice: 100, // 100 paise = 1 INR
       originalPrice: 49900,
-      message: `Coupon applied! ${2 - usedCount} uses remaining.`
+      message: `Coupon applied! ${5 - usedCount} uses remaining.`
     }, { status: 200 });
 
   } catch (error) {
