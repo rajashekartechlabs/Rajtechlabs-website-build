@@ -8,7 +8,7 @@ A professional portfolio website featuring a custom-built 1-on-1 strategy call b
 -   **Booking System**: Dedicated `/book` page with a multi-step booking process.
     -   **Dynamic Time Slots**: Interactive selection from 10:00 AM to 5:00 PM (30-min intervals).
     -   **Date Restrictions**: Prevents last-minute bookings (minimum 48 hours notice).
--   **Coupon System**: Backend-verified coupon codes (e.g., `TEST1RUP`) with strict usage limits stored in Firestore.
+-   **Coupon System**: Backend-verified coupon codes (e.g., `TESTING`) with strict usage limits stored in Firestore.
 -   **Razorpay Integration**: Secure payment processing for call bookings.
 -   **Firebase Backend**: Uses Firestore to securely store booking details, track coupon usage, and manage payment statuses.
 -   **Automated Emails**: Integrated with Nodemailer (Gmail) to send instant confirmations to both the admin and the customer.
